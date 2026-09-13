@@ -1,0 +1,824 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #080808;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 75px;
+    margin: auto;
+    padding: 15px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo,
+.footer-logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 3vw, 35px);
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+#theme-toggle {
+    border: none;
+    background: white;
+    color: black;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 100%;
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.88),
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.15)
+    );
+
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 120px 30px 60px;
+}
+
+.small-text {
+    font-size: clamp(11px, 1.2vw, 14px);
+    font-weight: 700;
+    letter-spacing: clamp(2px, 0.5vw, 5px);
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(58px, 10vw, 135px);
+    line-height: 0.85;
+    font-weight: 400;
+
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+
+    max-width: 100%;
+}
+
+.hero-content > p:not(.small-text) {
+    max-width: 450px;
+    margin-bottom: 30px;
+    color: #ddd;
+    font-size: clamp(14px, 1.5vw, 17px);
+}
+
+.hero-btn,
+.outline-btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid white;
+    background: white;
+    color: black;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover,
+.outline-btn:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   ADVENTURES
+========================= */
+
+.adventures {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+    padding: clamp(70px, 10vw, 120px) 30px;
+}
+
+.section-heading {
+    margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+.section-heading p {
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+.section-heading h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: 0.9;
+    letter-spacing: 3px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+
+    height: clamp(350px, 40vw, 480px);
+
+    overflow: hidden;
+    background: #151515;
+
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 25%,
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+.card-content {
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+}
+
+.card-content span {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.card-content h3 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(30px, 4vw, 42px);
+    letter-spacing: 2px;
+
+    margin: 5px 0;
+}
+
+.card-content p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ATHLETE
+========================= */
+
+.athlete-section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 60px 30px 120px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+}
+
+.athlete-image {
+    width: 100%;
+    height: clamp(400px, 50vw, 600px);
+
+    overflow: hidden;
+}
+
+.athlete-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.athlete-content h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 0.85;
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.athlete-content > p:not(.small-text) {
+    max-width: 450px;
+
+    color: #bbb;
+    margin-bottom: 30px;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
+    width: 100%;
+
+    text-align: center;
+
+    padding: clamp(70px, 9vw, 110px) 20px;
+
+    background: #111;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background: rgba(255, 30, 30, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    top: -150px;
+    left: -100px;
+}
+
+.countdown-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: rgba(255, 200, 0, 0.08);
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    bottom: -150px;
+    right: -100px;
+}
+
+.countdown-section .small-text,
+.countdown-section h2,
+.countdown {
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1;
+
+    letter-spacing: 3px;
+
+    margin-bottom: clamp(35px, 5vw, 55px);
+}
+
+.countdown {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: clamp(10px, 2vw, 20px);
+
+    flex-wrap: wrap;
+}
+
+.countdown div {
+    width: clamp(110px, 13vw, 150px);
+
+    padding: clamp(20px, 3vw, 30px) 10px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+.countdown div:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.countdown span {
+    display: block;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(45px, 6vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: 3px;
+}
+
+.countdown small {
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #aaa;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats-section {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: clamp(70px, 9vw, 100px) 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    text-align: center;
+
+    gap: 30px;
+}
+
+.stat h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(45px, 6vw, 65px);
+    letter-spacing: 2px;
+}
+
+.stat p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #999;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background: #050505;
+
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode {
+    background: #f4f4f4;
+    color: #111;
+}
+
+body.light-mode header {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+body.light-mode .nav-links a {
+    color: #111;
+}
+
+body.light-mode .hero-content > p:not(.small-text) {
+    color: #333;
+}
+
+body.light-mode .countdown-section {
+    background: #e5e5e5;
+}
+
+body.light-mode .countdown div {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .countdown small {
+    color: #555;
+}
+
+body.light-mode .card {
+    background: white;
+}
+
+body.light-mode footer {
+    background: #ddd;
+    border-color: #ccc;
+}
+
+body.light-mode .athlete-content > p:not(.small-text),
+body.light-mode .card-content p {
+    color: #555;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards .card:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        width: 100%;
+        margin: auto;
+    }
+
+    .athlete-section {
+        gap: 35px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #theme-toggle {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 16px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero-content {
+        padding: 100px 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: clamp(58px, 18vw, 90px);
+        letter-spacing: 1px;
+    }
+
+    .hero-content > p:not(.small-text) {
+        max-width: 350px;
+    }
+
+    .hero-btn,
+    .outline-btn {
+        padding: 13px 22px;
+        font-size: 12px;
+    }
+
+
+    /* ADVENTURES */
+
+    .adventures {
+        padding: 70px 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .cards .card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .card {
+        height: 430px;
+    }
+
+
+    /* ATHLETE */
+
+    .athlete-section {
+        grid-template-columns: 1fr;
+
+        padding: 40px 20px 80px;
+
+        gap: 40px;
+    }
+
+    .athlete-image {
+        height: 450px;
+    }
+
+    .athlete-content h2 {
+        font-size: clamp(55px, 17vw, 80px);
+    }
+
+
+    /* COUNTDOWN */
+
+    .countdown-section {
+        padding: 70px 15px;
+    }
+
+    .countdown-section h2 {
+        font-size: clamp(40px, 12vw, 60px);
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .countdown div {
+        width: calc(50% - 10px);
+        max-width: 145px;
+    }
+
+    .countdown span {
+        font-size: clamp(45px, 14vw, 60px);
+    }
+
+
+    /* STATS */
+
+    .stats-section {
+        grid-template-columns: 1fr;
+
+        padding: 70px 20px;
+
+        gap: 45px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 45px 20px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .card {
+        height: 380px;
+    }
+
+    .athlete-image {
+        height: 380px;
+    }
+
+    .countdown div {
+        width: calc(50% - 6px);
+        padding: 18px 5px;
+    }
+
+    .countdown span {
+        font-size: 42px;
+    }
+
+    .countdown small {
+        font-size: 9px;
+    }
+}

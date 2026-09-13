@@ -3,15 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Red Bull | Unleash Your Energy</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>UNLEASH YOUR ENERGY</h1>
-    <p>Red Bull Inspired Landing Page</p>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">RED BULL</div>
 
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#adventures">Adventures</a></li>
+                <li><a href="#athlete">Athlete</a></li>
+                <li><a href="#countdown">Event</a></li>
+            </ul>
+
+            <button id="theme-toggle">☀️</button>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+
+        <img src="images/hero.jpg" alt="Adventure athlete">
+
+        <div class="hero-content">
+            <p class="small-text">ENERGY • ADVENTURE • PASSION</p>
+
+            <h1>UNLEASH<br>YOUR ENERGY</h1>
+
+            <p>
+                Push your limits. Chase the impossible.
+                Experience the rush.
+            </p>
+
+            <a href="#adventures" class="hero-btn">
+                EXPLORE THE RUSH
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- ADVENTURES SECTION -->
+    <section id="adventures" class="adventures">
+
+        <div class="section-heading">
+            <p>EXPLORE</p>
+            <h2>THE RUSH</h2>
+        </div>
+
+
+        <div class="cards">
+
+            <!-- CARD 1 -->
+            <div class="card reveal">
+
+                <img src="images/racing.jpg" alt="Motorsport racing">
+
+                <div class="card-content">
+                    <span>01</span>
+                    <h3>RACING</h3>
+                    <p>
+                        Speed, precision and the thrill of competition.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="card reveal">
+
+                <img src="images/mountain.jpg" alt="Mountain biking">
+
+                <div class="card-content">
+                    <span>02</span>
+                    <h3>MOUNTAIN</h3>
+                    <p>
+                        Ride beyond limits and discover new heights.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+            <div class="card reveal">
+
+                <img src="images/cliff.jpg" alt="Cliff diving">
+
+                <div class="card-content">
+                    <span>03</span>
+                    <h3>ADVENTURE</h3>
+                    <p>
+                        Take the leap and embrace the unknown.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ATHLETE SECTION -->
+    <section id="athlete" class="athlete-section">
+
+        <div class="athlete-image reveal">
+            <img src="images/athlete.jpg" alt="Adventure athlete">
+        </div>
+
+        <div class="athlete-content reveal">
+
+            <p class="small-text">GO BEYOND</p>
+
+            <h2>BUILT FOR<br>THOSE WHO<br>DARE</h2>
+
+            <p>
+                Great moments begin when you step outside
+                your comfort zone. Challenge yourself,
+                stay focused and keep moving forward.
+            </p>
+
+            <button class="outline-btn">
+                DISCOVER MORE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- COUNTDOWN SECTION -->
+    <section id="countdown" class="countdown-section">
+
+        <p class="small-text">THE NEXT CHALLENGE</p>
+
+        <h2>COUNTDOWN TO THE RUSH</h2>
+
+        <div class="countdown">
+
+            <div>
+                <span id="days">00</span>
+                <small>DAYS</small>
+            </div>
+
+            <div>
+                <span id="hours">00</span>
+                <small>HOURS</small>
+            </div>
+
+            <div>
+                <span id="minutes">00</span>
+                <small>MINUTES</small>
+            </div>
+
+            <div>
+                <span id="seconds">00</span>
+                <small>SECONDS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+
+        <div class="stat reveal">
+            <h2>24/7</h2>
+            <p>ENERGY</p>
+        </div>
+
+        <div class="stat reveal">
+            <h2>100%</h2>
+            <p>PASSION</p>
+        </div>
+
+        <div class="stat reveal">
+            <h2>∞</h2>
+            <p>POSSIBILITIES</p>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            RED BULL
+        </div>
+
+        <p>
+            Student project — unofficial, independently created concept.
+        </p>
+
+        <p>
+            Not affiliated with or endorsed by Red Bull.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
+
 </body>
 </html>

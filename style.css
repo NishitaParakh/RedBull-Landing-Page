@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-
 /* =========================
    RESET
 ========================= */
@@ -18,12 +16,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: #080808;
     color: white;
-    line-height: 1.6;
     overflow-x: hidden;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
 
@@ -45,60 +42,68 @@ button {
 header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(10px);
+    background: rgba(5,5,5,0.75);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .navbar {
-    width: 100%;
-    max-width: 1200px;
-    min-height: 75px;
+    max-width: 1300px;
     margin: auto;
-    padding: 15px 30px;
+    min-height: 75px;
+    padding: 15px 35px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
 }
 
 .logo,
 .footer-logo {
-    font-size: 24px;
     font-weight: 900;
+    font-size: 22px;
     letter-spacing: 2px;
-    white-space: nowrap;
+}
+
+.logo span,
+.footer-logo span {
+    opacity: 0.45;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    align-items: center;
-    gap: clamp(15px, 3vw, 35px);
+    gap: 35px;
 }
 
 .nav-links a {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
+    letter-spacing: 1px;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 #theme-toggle {
-    border: none;
-    background: white;
-    color: black;
     width: 42px;
     height: 42px;
-    min-width: 42px;
     border-radius: 50%;
-    font-size: 18px;
+    border: 1px solid rgba(255,255,255,0.3);
+
+    background: transparent;
+    color: white;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: rotate(20deg);
 }
 
 
@@ -107,206 +112,331 @@ header {
 ========================= */
 
 .hero {
-    width: 100%;
-    min-height: 100svh;
+    min-height: 100vh;
     position: relative;
-    overflow: hidden;
-
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
-.hero img {
+.hero-bg {
     position: absolute;
     inset: 0;
 
-    width: 100%;
-    height: 100%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.9),
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.1)
+        ),
+        url("images/hero.jpg");
 
-    object-fit: cover;
-    object-position: center;
+    background-size: cover;
+    background-position: center;
 
-    z-index: 0;
+    transform: scale(1.05);
+
+    animation: heroZoom 8s ease forwards;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+@keyframes heroZoom {
 
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.88),
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.15)
-    );
+    from {
+        transform: scale(1.12);
+    }
 
-    z-index: 1;
+    to {
+        transform: scale(1.05);
+    }
+
 }
+
 
 .hero-content {
     position: relative;
     z-index: 2;
 
+    max-width: 1300px;
     width: 100%;
-    max-width: 1200px;
-
     margin: auto;
-    padding: 120px 30px 60px;
+
+    padding: 150px 35px 80px;
 }
 
-.small-text {
-    font-size: clamp(11px, 1.2vw, 14px);
+.eyebrow {
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: clamp(2px, 0.5vw, 5px);
-    margin-bottom: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
     font-family: 'Bebas Neue', sans-serif;
 
-    font-size: clamp(58px, 10vw, 135px);
-    line-height: 0.85;
-    font-weight: 400;
+    font-size: clamp(80px, 13vw, 175px);
 
+    line-height: 0.82;
     letter-spacing: 3px;
-    margin-bottom: 25px;
 
-    max-width: 100%;
+    margin-bottom: 35px;
 }
 
-.hero-content > p:not(.small-text) {
-    max-width: 450px;
-    margin-bottom: 30px;
-    color: #ddd;
-    font-size: clamp(14px, 1.5vw, 17px);
+.hero h1 span {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
 }
 
-.hero-btn,
-.outline-btn {
-    display: inline-block;
+.hero-description {
+    max-width: 430px;
 
-    padding: 14px 28px;
+    color: #ccc;
 
-    border: 1px solid white;
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* BUTTON */
+
+.main-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 16px 25px;
+
     background: white;
     color: black;
 
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 800;
+    letter-spacing: 1px;
 
-    transition: 0.3s ease;
+    transition: 0.35s;
 }
 
-.hero-btn:hover,
-.outline-btn:hover {
+.main-btn span {
+    font-size: 18px;
+}
+
+.main-btn:hover {
     background: transparent;
     color: white;
-    transform: translateY(-3px);
+
+    outline: 1px solid white;
+
+    transform: translateX(6px);
+}
+
+
+.hero-number {
+    position: absolute;
+
+    right: 35px;
+    bottom: 60px;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 120px;
+
+    color: rgba(255,255,255,0.08);
+}
+
+.scroll-text {
+    position: absolute;
+
+    bottom: 35px;
+    left: 35px;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: #aaa;
 }
 
 
 /* =========================
-   ADVENTURES
+   INTRO
 ========================= */
 
-.adventures {
-    width: 100%;
+.intro {
     max-width: 1200px;
-
     margin: auto;
-    padding: clamp(70px, 10vw, 120px) 30px;
+
+    padding: 150px 35px;
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 50px;
 }
 
-.section-heading {
-    margin-bottom: clamp(30px, 5vw, 50px);
+.intro-number {
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 2px;
 }
 
-.section-heading p {
-    letter-spacing: 4px;
-    font-size: 13px;
-}
-
-.section-heading h2 {
+.intro h2,
+.section-title h2,
+.athlete-content h2,
+.event-header h2,
+.panel-content h2 {
     font-family: 'Bebas Neue', sans-serif;
 
-    font-size: clamp(55px, 8vw, 90px);
-    line-height: 0.9;
-    letter-spacing: 3px;
+    font-size: clamp(65px, 8vw, 110px);
+
+    line-height: 0.85;
+
+    letter-spacing: 2px;
 }
 
-.cards {
+.intro h2 span,
+.section-title h2 span,
+.athlete-content h2 span,
+.event-header h2 span,
+.panel-content h2 span {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.intro-text {
+    max-width: 600px;
+
+    color: #999;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-top: 35px;
+}
+
+
+/* =========================
+   RUSH SECTION
+========================= */
+
+.rush-section {
+    max-width: 1300px;
+    margin: auto;
+
+    padding: 80px 35px 150px;
+}
+
+.section-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 60px;
+}
+
+.section-title > p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.experience-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+    gap: 18px;
 }
 
-.card {
+.experience-card {
+    height: 560px;
+
     position: relative;
 
-    height: clamp(350px, 40vw, 480px);
-
     overflow: hidden;
+
+    cursor: pointer;
+
     background: #151515;
-
-    transition: transform 0.4s ease;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
+.experience-card img {
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 
-    transition: transform 0.6s ease;
+    transition: 0.8s ease;
 }
 
-.card:hover img {
-    transform: scale(1.08);
+.experience-card:hover img {
+    transform: scale(1.12);
 }
 
-.card::after {
-    content: "";
+.card-overlay {
     position: absolute;
     inset: 0;
 
-    background: linear-gradient(
-        transparent 25%,
-        rgba(0, 0, 0, 0.9)
-    );
+    background:
+        linear-gradient(
+            transparent 25%,
+            rgba(0,0,0,0.95)
+        );
 }
 
-.card-content {
+.card-number {
     position: absolute;
 
-    z-index: 2;
-
-    bottom: 25px;
+    top: 25px;
     left: 25px;
-    right: 25px;
+
+    font-size: 12px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    padding: 8px 12px;
 }
 
-.card-content span {
-    font-size: 13px;
-    opacity: 0.7;
+.card-info {
+    position: absolute;
+
+    left: 30px;
+    right: 20px;
+    bottom: 30px;
 }
 
-.card-content h3 {
+.card-info p {
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: #aaa;
+
+    margin-bottom: 10px;
+}
+
+.card-info h3 {
     font-family: 'Bebas Neue', sans-serif;
 
-    font-size: clamp(30px, 4vw, 42px);
+    font-size: 60px;
+
     letter-spacing: 2px;
 
-    margin: 5px 0;
+    line-height: 1;
 }
 
-.card-content p {
-    color: #ccc;
-    font-size: 14px;
+.card-info span {
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 9px;
+
+    color: #aaa;
+
+    letter-spacing: 2px;
 }
 
 
@@ -315,22 +445,25 @@ header {
 ========================= */
 
 .athlete-section {
-    width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
 
     margin: auto;
-    padding: 60px 30px 120px;
+
+    padding: 100px 35px 150px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    gap: clamp(40px, 6vw, 80px);
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 100px;
+
     align-items: center;
 }
 
 .athlete-image {
-    width: 100%;
-    height: clamp(400px, 50vw, 600px);
+    height: 700px;
+
+    position: relative;
 
     overflow: hidden;
 }
@@ -340,151 +473,221 @@ header {
     height: 100%;
 
     object-fit: cover;
+
+    transition: 0.7s;
 }
 
-.athlete-content h2 {
-    font-family: 'Bebas Neue', sans-serif;
-
-    font-size: clamp(55px, 7vw, 90px);
-    line-height: 0.85;
-    letter-spacing: 3px;
-
-    margin-bottom: 30px;
+.athlete-image:hover img {
+    transform: scale(1.05);
 }
 
-.athlete-content > p:not(.small-text) {
-    max-width: 450px;
+.image-label {
+    position: absolute;
 
-    color: #bbb;
-    margin-bottom: 30px;
+    bottom: 20px;
+    left: 20px;
 
-    font-size: 15px;
+    background: white;
+
+    color: black;
+
+    padding: 10px 15px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.athlete-content > p:not(.eyebrow) {
+    color: #999;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    max-width: 430px;
+
+    margin: 30px 0;
+}
+
+.discover-btn {
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid white;
+
+    padding: 15px 20px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    transition: 0.3s;
+}
+
+.discover-btn span {
+    font-size: 18px;
+}
+
+.discover-btn:hover {
+    background: white;
+    color: black;
+
+    transform: translateX(8px);
 }
 
 
 /* =========================
-   COUNTDOWN
+   DISCOVER PANEL
 ========================= */
 
-.countdown-section {
-    width: 100%;
+.discover-panel {
+    max-height: 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            #161616,
+            #050505
+        );
+
+    transition: max-height 0.8s ease;
+}
+
+.discover-panel.open {
+    max-height: 650px;
+}
+
+.panel-content {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 120px 35px;
+}
+
+.panel-content > p:not(.eyebrow) {
+    max-width: 500px;
+
+    color: #999;
+
+    line-height: 1.8;
+
+    margin: 30px 0;
+}
+
+
+/* =========================
+   EVENT
+========================= */
+
+.event-section {
+    padding: 150px 35px;
 
     text-align: center;
-
-    padding: clamp(70px, 9vw, 110px) 20px;
 
     background: #111;
 
     position: relative;
+
     overflow: hidden;
 }
 
-.countdown-section::before {
+.event-section::before {
     content: "";
 
     position: absolute;
 
-    width: 350px;
-    height: 350px;
-
-    background: rgba(255, 30, 30, 0.12);
+    width: 500px;
+    height: 500px;
 
     border-radius: 50%;
 
-    filter: blur(80px);
+    background: rgba(255,255,255,0.04);
 
-    top: -150px;
-    left: -100px;
+    filter: blur(60px);
+
+    left: -200px;
+    top: -200px;
 }
 
-.countdown-section::after {
-    content: "";
-
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    background: rgba(255, 200, 0, 0.08);
-
-    border-radius: 50%;
-
-    filter: blur(80px);
-
-    bottom: -150px;
-    right: -100px;
-}
-
-.countdown-section .small-text,
-.countdown-section h2,
-.countdown {
+.event-header {
     position: relative;
     z-index: 2;
 }
 
-.countdown-section h2 {
-    font-family: 'Bebas Neue', sans-serif;
+.event-header > p:last-child {
+    color: #777;
 
-    font-size: clamp(42px, 6vw, 75px);
-    line-height: 1;
-
-    letter-spacing: 3px;
-
-    margin-bottom: clamp(35px, 5vw, 55px);
+    margin-top: 20px;
 }
 
 .countdown {
+    position: relative;
+    z-index: 2;
+
     display: flex;
 
     justify-content: center;
-    align-items: stretch;
 
-    gap: clamp(10px, 2vw, 20px);
+    gap: 15px;
+
+    margin-top: 70px;
 
     flex-wrap: wrap;
 }
 
-.countdown div {
-    width: clamp(110px, 13vw, 150px);
+.time-box {
+    width: 150px;
 
-    padding: clamp(20px, 3vw, 30px) 10px;
+    padding: 30px 15px;
 
-    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255,255,255,0.12);
 
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255,255,255,0.03);
 
-    backdrop-filter: blur(10px);
-
-    transition: 0.3s ease;
+    transition: 0.35s;
 }
 
-.countdown div:hover {
-    transform: translateY(-8px);
+.time-box:hover {
+    transform: translateY(-10px);
 
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.08);
 }
 
-.countdown span {
+.time-box span {
     display: block;
 
     font-family: 'Bebas Neue', sans-serif;
 
-    font-size: clamp(45px, 6vw, 65px);
+    font-size: 70px;
 
     line-height: 1;
-
-    letter-spacing: 3px;
 }
 
-.countdown small {
+.time-box small {
     display: block;
 
     margin-top: 10px;
 
-    font-size: 10px;
-    letter-spacing: 2px;
+    color: #777;
 
-    color: #aaa;
+    font-size: 9px;
+
+    letter-spacing: 3px;
 }
 
 
@@ -493,38 +696,50 @@ header {
 ========================= */
 
 .stats-section {
-    width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
 
     margin: auto;
 
-    padding: clamp(70px, 9vw, 100px) 30px;
+    padding: 120px 35px;
 
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    text-align: center;
-
     gap: 30px;
 }
 
-.stat h2 {
+.stat {
+    border-top: 1px solid #333;
+
+    padding-top: 20px;
+}
+
+.stat span {
+    font-size: 10px;
+
+    color: #777;
+}
+
+.stat h3 {
     font-family: 'Bebas Neue', sans-serif;
 
-    font-size: clamp(45px, 6vw, 65px);
-    letter-spacing: 2px;
+    font-size: 70px;
+
+    margin-top: 20px;
 }
 
 .stat p {
-    font-size: 12px;
+    font-size: 10px;
+
     letter-spacing: 3px;
-    color: #999;
+
+    color: #777;
 }
 
 
 /* =========================
-   SCROLL REVEAL
+   SCROLL ANIMATION
 ========================= */
 
 .reveal {
@@ -539,31 +754,8 @@ header {
 
 .reveal.active {
     opacity: 1;
+
     transform: translateY(0);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 60px 30px;
-
-    text-align: center;
-
-    background: #050505;
-
-    border-top: 1px solid #222;
-}
-
-.footer-logo {
-    margin-bottom: 15px;
-}
-
-footer p {
-    color: #777;
-    font-size: 12px;
 }
 
 
@@ -572,82 +764,71 @@ footer p {
 ========================= */
 
 body.light-mode {
-    background: #f4f4f4;
+    background: #f2f2f2;
+
     color: #111;
 }
 
 body.light-mode header {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255,255,255,0.85);
 }
 
 body.light-mode .nav-links a {
     color: #111;
 }
 
-body.light-mode .hero-content > p:not(.small-text) {
-    color: #333;
+body.light-mode #theme-toggle {
+    color: #111;
+
+    border-color: #111;
 }
 
-body.light-mode .countdown-section {
-    background: #e5e5e5;
+body.light-mode .hero-bg {
+    filter: brightness(0.8);
 }
 
-body.light-mode .countdown div {
-    background: rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.1);
+body.light-mode .hero h1 span,
+body.light-mode .intro h2 span,
+body.light-mode .section-title h2 span,
+body.light-mode .athlete-content h2 span,
+body.light-mode .event-header h2 span,
+body.light-mode .panel-content h2 span {
+    -webkit-text-stroke: 1px #111;
 }
 
-body.light-mode .countdown small {
+body.light-mode .intro-text,
+body.light-mode .athlete-content > p:not(.eyebrow) {
     color: #555;
 }
 
-body.light-mode .card {
-    background: white;
+body.light-mode .event-section {
+    background: #ddd;
+}
+
+body.light-mode .time-box {
+    background: rgba(0,0,0,0.04);
+
+    border-color: rgba(0,0,0,0.12);
+}
+
+body.light-mode .discover-panel {
+    background: #ddd;
+}
+
+body.light-mode .discover-btn {
+    color: #111;
+
+    border-color: #111;
+}
+
+body.light-mode .discover-btn:hover {
+    background: #111;
+
+    color: white;
 }
 
 body.light-mode footer {
     background: #ddd;
-    border-color: #ccc;
-}
-
-body.light-mode .athlete-content > p:not(.small-text),
-body.light-mode .card-content p {
-    color: #555;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cards .card:last-child {
-        grid-column: 1 / -1;
-        max-width: 50%;
-        width: 100%;
-        margin: auto;
-    }
-
-    .athlete-section {
-        gap: 35px;
-    }
 }
 
 
@@ -655,170 +836,113 @@ body.light-mode .card-content p {
    MOBILE
 ========================= */
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
 
     .navbar {
-        min-height: 65px;
-        padding: 12px 15px;
-    }
-
-    .logo {
-        font-size: 19px;
+        padding: 15px 20px;
     }
 
     .nav-links {
         display: none;
     }
 
-    #theme-toggle {
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
-        font-size: 16px;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        min-height: 100svh;
-    }
-
     .hero-content {
-        padding: 100px 20px 40px;
+        padding: 130px 20px 70px;
     }
 
     .hero h1 {
-        font-size: clamp(58px, 18vw, 90px);
-        letter-spacing: 1px;
+        font-size: 82px;
     }
 
-    .hero-content > p:not(.small-text) {
-        max-width: 350px;
+    .hero-number {
+        right: 20px;
+
+        font-size: 80px;
     }
 
-    .hero-btn,
-    .outline-btn {
-        padding: 13px 22px;
-        font-size: 12px;
+    .scroll-text {
+        left: 20px;
     }
 
-
-    /* ADVENTURES */
-
-    .adventures {
-        padding: 70px 20px;
-    }
-
-    .cards {
+    .intro {
         grid-template-columns: 1fr;
-        gap: 18px;
+
+        padding: 100px 20px;
+
+        gap: 20px;
     }
 
-    .cards .card:last-child {
-        grid-column: auto;
-        max-width: none;
+    .rush-section {
+        padding: 60px 20px 100px;
     }
 
-    .card {
-        height: 430px;
+    .section-title {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 25px;
     }
 
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
 
-    /* ATHLETE */
+    .experience-card {
+        height: 480px;
+    }
 
     .athlete-section {
         grid-template-columns: 1fr;
 
-        padding: 40px 20px 80px;
+        padding: 80px 20px 100px;
 
-        gap: 40px;
+        gap: 50px;
     }
 
     .athlete-image {
-        height: 450px;
+        height: 500px;
     }
 
-    .athlete-content h2 {
-        font-size: clamp(55px, 17vw, 80px);
+    .event-section {
+        padding: 100px 20px;
     }
 
-
-    /* COUNTDOWN */
-
-    .countdown-section {
-        padding: 70px 15px;
-    }
-
-    .countdown-section h2 {
-        font-size: clamp(40px, 12vw, 60px);
-    }
-
-    .countdown {
-        gap: 10px;
-    }
-
-    .countdown div {
+    .time-box {
         width: calc(50% - 10px);
-        max-width: 145px;
     }
-
-    .countdown span {
-        font-size: clamp(45px, 14vw, 60px);
-    }
-
-
-    /* STATS */
 
     .stats-section {
         grid-template-columns: 1fr;
 
-        padding: 70px 20px;
+        padding: 90px 20px;
 
-        gap: 45px;
+        gap: 50px;
     }
 
-
-    /* FOOTER */
-
-    footer {
-        padding: 45px 20px;
+    .stat h3 {
+        font-size: 60px;
     }
 
-    footer p {
-        font-size: 11px;
-    }
 }
 
 
-/* =========================
-   VERY SMALL PHONES
-========================= */
-
-@media (max-width: 380px) {
+@media (max-width: 400px) {
 
     .hero h1 {
-        font-size: 55px;
+        font-size: 68px;
     }
 
-    .card {
-        height: 380px;
+    .experience-card {
+        height: 400px;
     }
 
     .athlete-image {
-        height: 380px;
+        height: 400px;
     }
 
-    .countdown div {
-        width: calc(50% - 6px);
-        padding: 18px 5px;
+    .time-box span {
+        font-size: 55px;
     }
 
-    .countdown span {
-        font-size: 42px;
-    }
-
-    .countdown small {
-        font-size: 9px;
-    }
 }

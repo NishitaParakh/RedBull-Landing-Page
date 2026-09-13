@@ -9,10 +9,13 @@ The website focuses on energy, speed, adventure, and an immersive visual experie
 ## Student Details
 
 **Name:** Nishita Parakh
+
 **Registration Number:** 25BAI10028
+
 **Coding Profiles:** 
 1. GitHub: https://github.com/NishitaParakh
 2. LeetCode: https://leetcode.com/u/NKsh2EqezT/
+
 **Resume:** https://canva.link/mtg99osla9bb1q1
 
 ## Features

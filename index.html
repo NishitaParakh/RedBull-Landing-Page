@@ -1,363 +1,542 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Red Bull | Beyond Limits</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<!-- NAVBAR -->
-<header>
-    <nav class="navbar">
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
-        <div class="logo">
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                RED <span>BULL</span>
+            </div>
+
+            <div class="nav-links">
+
+                <a href="#home">HOME</a>
+
+                <a href="#rush">THE RUSH</a>
+
+                <a href="#athlete">ATHLETE</a>
+
+                <a href="#event">EVENT</a>
+
+            </div>
+
+            <button id="theme-toggle" aria-label="Toggle light and dark mode">
+                ☀
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-bg"></div>
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                ENERGY • SPEED • ADVENTURE
+            </p>
+
+            <h1>
+                LIVE<br>
+                <span>WITHOUT</span><br>
+                LIMITS
+            </h1>
+
+            <p class="hero-description">
+                The world belongs to those who dare to go beyond
+                what they thought was possible.
+            </p>
+
+            <a href="#rush" class="main-btn">
+                ENTER THE RUSH
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="hero-number">
+            01
+        </div>
+
+        <div class="scroll-text">
+            SCROLL TO EXPLORE ↓
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="intro reveal">
+
+        <div class="intro-number">
+            01 / 04
+        </div>
+
+        <div>
+
+            <p class="eyebrow">
+                THE MINDSET
+            </p>
+
+            <h2>
+                DON'T FOLLOW<br>
+                <span>THE LIMITS.</span>
+            </h2>
+
+            <p class="intro-text">
+                Limits are only boundaries waiting to be crossed.
+                From impossible speeds to breathtaking heights,
+                every challenge begins with one decision —
+                to go further.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         THE RUSH
+    ========================== -->
+
+    <section id="rush" class="rush-section">
+
+        <div class="section-title reveal">
+
+            <div>
+
+                <p class="eyebrow">
+                    02 / 04
+                </p>
+
+                <h2>
+                    THE<br>
+                    <span>RUSH</span>
+                </h2>
+
+            </div>
+
+            <p>
+                Choose your challenge.<br>
+                Find your edge.
+            </p>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+
+            <!-- RACING -->
+
+            <article class="experience-card reveal">
+
+                <img
+                    src="images/racing.jpg"
+                    alt="Motorsport racing">
+
+                <div class="card-overlay"></div>
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <div class="card-info">
+
+                    <p>
+                        01 — SPEED
+                    </p>
+
+                    <h3>
+                        RACING
+                    </h3>
+
+                    <span>
+                        PRECISION / POWER / SPEED
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- MOUNTAIN -->
+
+            <article class="experience-card reveal">
+
+                <img
+                    src="images/mountain.jpg"
+                    alt="Mountain biking">
+
+                <div class="card-overlay"></div>
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <div class="card-info">
+
+                    <p>
+                        02 — HEIGHT
+                    </p>
+
+                    <h3>
+                        MOUNTAIN
+                    </h3>
+
+                    <span>
+                        CONTROL / COURAGE / HEIGHT
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- ADVENTURE -->
+
+            <article class="experience-card reveal">
+
+                <img
+                    src="images/cliff.jpg"
+                    alt="Cliff diving">
+
+                <div class="card-overlay"></div>
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <div class="card-info">
+
+                    <p>
+                        03 — ADRENALINE
+                    </p>
+
+                    <h3>
+                        ADVENTURE
+                    </h3>
+
+                    <span>
+                        COURAGE / FREEDOM / RUSH
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ATHLETE
+    ========================== -->
+
+    <section id="athlete" class="athlete-section">
+
+
+        <div class="athlete-image reveal">
+
+            <img
+                src="images/athlete.jpg"
+                alt="Adventure athlete">
+
+            <div class="image-label">
+                BEYOND ORDINARY
+            </div>
+
+        </div>
+
+
+        <div class="athlete-content reveal">
+
+            <p class="eyebrow">
+                03 / 04 — ATHLETE
+            </p>
+
+            <h2>
+                BUILT<br>
+                TO GO<br>
+                <span>FURTHER.</span>
+            </h2>
+
+            <p>
+                Great performances aren't created by staying
+                comfortable. They are created by testing the
+                boundaries, learning from every attempt and
+                pushing forward.
+            </p>
+
+
+            <button
+                id="discover-btn"
+                class="discover-btn">
+
+                DISCOVER MORE
+
+                <span>
+                    ↗
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DISCOVER PANEL
+    ========================== -->
+
+    <section
+        id="discover-panel"
+        class="discover-panel">
+
+        <div class="panel-content">
+
+            <p class="eyebrow">
+                THE NEXT LEVEL
+            </p>
+
+            <h2>
+                FIND YOUR<br>
+                <span>OWN EDGE.</span>
+            </h2>
+
+            <p>
+                Whether it's speed, height or endurance,
+                the real challenge is discovering how far
+                you can push yourself.
+            </p>
+
+            <a
+                href="#event"
+                class="main-btn">
+
+                SEE THE NEXT CHALLENGE
+
+                <span>
+                    ↓
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         COUNTDOWN EVENT
+    ========================== -->
+
+    <section
+        id="event"
+        class="event-section">
+
+
+        <div class="event-header reveal">
+
+            <p class="eyebrow">
+                04 / 04 — NEXT EVENT
+            </p>
+
+            <h2>
+                THE NEXT<br>
+                <span>CHALLENGE</span>
+            </h2>
+
+            <p>
+                Something big is coming.
+            </p>
+
+        </div>
+
+
+        <div class="countdown reveal">
+
+
+            <div class="time-box">
+
+                <span id="days">
+                    00
+                </span>
+
+                <small>
+                    DAYS
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="hours">
+                    00
+                </span>
+
+                <small>
+                    HOURS
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="minutes">
+                    00
+                </span>
+
+                <small>
+                    MINUTES
+                </small>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span id="seconds">
+                    00
+                </span>
+
+                <small>
+                    SECONDS
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATS
+    ========================== -->
+
+    <section class="stats-section">
+
+
+        <div class="stat reveal">
+
+            <span>
+                01
+            </span>
+
+            <h3>
+                24/7
+            </h3>
+
+            <p>
+                ENERGY
+            </p>
+
+        </div>
+
+
+        <div class="stat reveal">
+
+            <span>
+                02
+            </span>
+
+            <h3>
+                100%
+            </h3>
+
+            <p>
+                PASSION
+            </p>
+
+        </div>
+
+
+        <div class="stat reveal">
+
+            <span>
+                03
+            </span>
+
+            <h3>
+                ∞
+            </h3>
+
+            <p>
+                POSSIBILITIES
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
             RED <span>BULL</span>
         </div>
 
-        <div class="nav-links">
-            <a href="#home">HOME</a>
-            <a href="#rush">THE RUSH</a>
-            <a href="#athlete">ATHLETE</a>
-            <a href="#event">EVENT</a>
-        </div>
-
-        <button id="theme-toggle">☀</button>
-
-    </nav>
-</header>
-
-
-<!-- HERO -->
-<section id="home" class="hero">
-
-    <div class="hero-bg"></div>
-
-    <div class="hero-content">
-
-        <p class="eyebrow">
-            ENERGY • SPEED • ADVENTURE
+        <p>
+            Student project — unofficial, independently created concept.
         </p>
-
-        <h1>
-            LIVE<br>
-            <span>WITHOUT</span><br>
-            LIMITS
-        </h1>
-
-        <p class="hero-description">
-            The world belongs to those who dare to go beyond
-            what they thought was possible.
-        </p>
-
-        <a href="#rush" class="main-btn">
-            ENTER THE RUSH
-            <span>→</span>
-        </a>
-
-    </div>
-
-    <div class="hero-number">
-        01
-    </div>
-
-    <div class="scroll-text">
-        SCROLL TO EXPLORE ↓
-    </div>
-
-</section>
-
-
-<!-- INTRO -->
-<section class="intro reveal">
-
-    <div class="intro-number">
-        01 / 04
-    </div>
-
-    <div>
-        <p class="eyebrow">THE MINDSET</p>
-
-        <h2>
-            DON'T FOLLOW<br>
-            <span>THE LIMITS.</span>
-        </h2>
-
-        <p class="intro-text">
-            Limits are only boundaries waiting to be crossed.
-            From impossible speeds to breathtaking heights,
-            every challenge begins with one decision —
-            to go further.
-        </p>
-    </div>
-
-</section>
-
-
-<!-- THE RUSH -->
-<section id="rush" class="rush-section">
-
-    <div class="section-title reveal">
-
-        <div>
-            <p class="eyebrow">02 / 04</p>
-            <h2>THE<br><span>RUSH</span></h2>
-        </div>
 
         <p>
-            Choose your challenge.<br>
-            Find your edge.
+            Not affiliated with or endorsed by Red Bull.
         </p>
 
-    </div>
+    </footer>
 
 
-    <div class="experience-grid">
-
-        <!-- CARD 1 -->
-        <article class="experience-card reveal">
-
-            <img src="images/racing.jpg" alt="Motorsport racing">
-
-            <div class="card-overlay"></div>
-
-            <div class="card-number">01</div>
-
-            <div class="card-info">
-
-                <p>01 — SPEED</p>
-
-                <h3>RACING</h3>
-
-                <span>
-                    PRECISION / POWER / SPEED
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <!-- CARD 2 -->
-        <article class="experience-card reveal">
-
-            <img src="images/mountain.jpg" alt="Mountain biking">
-
-            <div class="card-overlay"></div>
-
-            <div class="card-number">02</div>
-
-            <div class="card-info">
-
-                <p>02 — HEIGHT</p>
-
-                <h3>MOUNTAIN</h3>
-
-                <span>
-                    CONTROL / COURAGE / HEIGHT
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <!-- CARD 3 -->
-        <article class="experience-card reveal">
-
-            <img src="images/cliff.jpg" alt="Cliff diving">
-
-            <div class="card-overlay"></div>
-
-            <div class="card-number">03</div>
-
-            <div class="card-info">
-
-                <p>03 — ADRENALINE</p>
-
-                <h3>ADVENTURE</h3>
-
-                <span>
-                    COURAGE / FREEDOM / RUSH
-                </span>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- ATHLETE -->
-<section id="athlete" class="athlete-section">
-
-    <div class="athlete-image reveal">
-
-        <img src="images/athlete.jpg" alt="Adventure athlete">
-
-        <div class="image-label">
-            BEYOND ORDINARY
-        </div>
-
-    </div>
-
-
-    <div class="athlete-content reveal">
-
-        <p class="eyebrow">03 / 04 — ATHLETE</p>
-
-        <h2>
-            BUILT<br>
-            TO GO<br>
-            <span>FURTHER.</span>
-        </h2>
-
-        <p>
-            Great performances aren't created by staying
-            comfortable. They are created by testing the
-            boundaries, learning from every attempt and
-            pushing forward.
-        </p>
-
-        <!-- FIXED BUTTON -->
-        <button id="discover-btn" class="discover-btn">
-            DISCOVER MORE
-            <span>↗</span>
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- DISCOVER PANEL -->
-<section id="discover-panel" class="discover-panel">
-
-    <div class="panel-content">
-
-        <p class="eyebrow">THE NEXT LEVEL</p>
-
-        <h2>
-            FIND YOUR<br>
-            <span>OWN EDGE.</span>
-        </h2>
-
-        <p>
-            Whether it's speed, height or endurance,
-            the real challenge is discovering how far
-            you can push yourself.
-        </p>
-
-        <a href="#event" class="main-btn">
-            SEE THE NEXT CHALLENGE
-            <span>↓</span>
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- COUNTDOWN -->
-<section id="event" class="event-section">
-
-    <div class="event-header reveal">
-
-        <p class="eyebrow">04 / 04 — NEXT EVENT</p>
-
-        <h2>
-            THE NEXT<br>
-            <span>CHALLENGE</span>
-        </h2>
-
-        <p>
-            Something big is coming.
-        </p>
-
-    </div>
-
-
-    <div class="countdown reveal">
-
-        <div class="time-box">
-            <span id="days">00</span>
-            <small>DAYS</small>
-        </div>
-
-        <div class="time-box">
-            <span id="hours">00</span>
-            <small>HOURS</small>
-        </div>
-
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <small>MINUTES</small>
-        </div>
-
-        <div class="time-box">
-            <span id="seconds">00</span>
-            <small>SECONDS</small>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- STATS -->
-<section class="stats-section">
-
-    <div class="stat reveal">
-        <span>01</span>
-        <h3>24/7</h3>
-        <p>ENERGY</p>
-    </div>
-
-    <div class="stat reveal">
-        <span>02</span>
-        <h3>100%</h3>
-        <p>PASSION</p>
-    </div>
-
-    <div class="stat reveal">
-        <span>03</span>
-        <h3>∞</h3>
-        <p>POSSIBILITIES</p>
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <div class="footer-logo">
-        RED <span>BULL</span>
-    </div>
-
-    <p>
-        Student project — unofficial, independently created concept.
-    </p>
-
-    <p>
-        Not affiliated with or endorsed by Red Bull.
-    </p>
-
-</footer>
-
-
-<script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>

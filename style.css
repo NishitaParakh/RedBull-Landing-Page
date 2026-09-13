@@ -1,6 +1,12 @@
-/* =========================
+/* =========================================================
+   RED BULL INSPIRED LANDING PAGE
+   COMPLETE DARK + LIGHT THEME CSS
+========================================================= */
+
+
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -15,8 +21,9 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     background: #080808;
-    color: white;
+    color: #ffffff;
     overflow-x: hidden;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 img {
@@ -35,24 +42,29 @@ button {
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* =========================================================
+   NAVBAR — DARK MODE
+========================================================= */
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(5,5,5,0.75);
+
+    background: rgba(5, 5, 5, 0.75);
+
     backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar {
     max-width: 1300px;
     margin: auto;
+
     min-height: 75px;
+
     padding: 15px 35px;
 
     display: flex;
@@ -81,6 +93,7 @@ header {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
+
     transition: 0.3s;
 }
 
@@ -91,8 +104,10 @@ header {
 #theme-toggle {
     width: 42px;
     height: 42px;
+
     border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.3);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
 
     background: transparent;
     color: white;
@@ -107,28 +122,32 @@ header {
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
     min-height: 100vh;
+
     position: relative;
+
     display: flex;
     align-items: center;
+
     overflow: hidden;
 }
 
 .hero-bg {
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,0.9),
-            rgba(0,0,0,0.55),
-            rgba(0,0,0,0.1)
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.1)
         ),
         url("images/hero.jpg");
 
@@ -152,22 +171,27 @@ header {
 
 }
 
-
 .hero-content {
     position: relative;
     z-index: 2;
 
     max-width: 1300px;
     width: 100%;
+
     margin: auto;
 
     padding: 150px 35px 80px;
+
+    color: #ffffff;
 }
 
 .eyebrow {
     font-size: 11px;
+
     font-weight: 700;
+
     letter-spacing: 4px;
+
     margin-bottom: 20px;
 }
 
@@ -177,20 +201,24 @@ header {
     font-size: clamp(80px, 13vw, 175px);
 
     line-height: 0.82;
+
     letter-spacing: 3px;
 
     margin-bottom: 35px;
+
+    color: #ffffff;
 }
 
 .hero h1 span {
     -webkit-text-stroke: 1px white;
+
     color: transparent;
 }
 
 .hero-description {
     max-width: 430px;
 
-    color: #ccc;
+    color: #cccccc;
 
     font-size: 15px;
 
@@ -200,20 +228,27 @@ header {
 }
 
 
-/* BUTTON */
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
 
 .main-btn {
     display: inline-flex;
+
     align-items: center;
+
     gap: 25px;
 
     padding: 16px 25px;
 
-    background: white;
-    color: black;
+    background: #ffffff;
+
+    color: #000000;
 
     font-size: 11px;
+
     font-weight: 800;
+
     letter-spacing: 1px;
 
     transition: 0.35s;
@@ -225,6 +260,7 @@ header {
 
 .main-btn:hover {
     background: transparent;
+
     color: white;
 
     outline: 1px solid white;
@@ -233,38 +269,46 @@ header {
 }
 
 
+/* =========================================================
+   HERO EXTRA
+========================================================= */
+
 .hero-number {
     position: absolute;
 
     right: 35px;
+
     bottom: 60px;
 
     font-family: 'Bebas Neue', sans-serif;
 
     font-size: 120px;
 
-    color: rgba(255,255,255,0.08);
+    color: rgba(255, 255, 255, 0.08);
 }
 
 .scroll-text {
     position: absolute;
 
     bottom: 35px;
+
     left: 35px;
 
     font-size: 9px;
+
     letter-spacing: 3px;
 
-    color: #aaa;
+    color: #aaaaaa;
 }
 
 
-/* =========================
+/* =========================================================
    INTRO
-========================= */
+========================================================= */
 
 .intro {
     max-width: 1200px;
+
     margin: auto;
 
     padding: 150px 35px;
@@ -278,7 +322,9 @@ header {
 
 .intro-number {
     font-size: 11px;
-    color: #777;
+
+    color: #777777;
+
     letter-spacing: 2px;
 }
 
@@ -287,6 +333,7 @@ header {
 .athlete-content h2,
 .event-header h2,
 .panel-content h2 {
+
     font-family: 'Bebas Neue', sans-serif;
 
     font-size: clamp(65px, 8vw, 110px);
@@ -301,14 +348,16 @@ header {
 .athlete-content h2 span,
 .event-header h2 span,
 .panel-content h2 span {
+
     color: transparent;
+
     -webkit-text-stroke: 1px white;
 }
 
 .intro-text {
     max-width: 600px;
 
-    color: #999;
+    color: #999999;
 
     font-size: 15px;
 
@@ -318,12 +367,13 @@ header {
 }
 
 
-/* =========================
+/* =========================================================
    RUSH SECTION
-========================= */
+========================================================= */
 
 .rush-section {
     max-width: 1300px;
+
     margin: auto;
 
     padding: 80px 35px 150px;
@@ -331,15 +381,19 @@ header {
 
 .section-title {
     display: flex;
+
     align-items: flex-end;
+
     justify-content: space-between;
 
     margin-bottom: 60px;
 }
 
 .section-title > p {
-    color: #777;
+    color: #777777;
+
     font-size: 13px;
+
     line-height: 1.8;
 }
 
@@ -378,12 +432,13 @@ header {
 
 .card-overlay {
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             transparent 25%,
-            rgba(0,0,0,0.95)
+            rgba(0, 0, 0, 0.95)
         );
 }
 
@@ -395,9 +450,11 @@ header {
 
     font-size: 12px;
 
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 
     padding: 8px 12px;
+
+    color: white;
 }
 
 .card-info {
@@ -405,14 +462,18 @@ header {
 
     left: 30px;
     right: 20px;
+
     bottom: 30px;
+
+    color: white;
 }
 
 .card-info p {
     font-size: 9px;
+
     letter-spacing: 3px;
 
-    color: #aaa;
+    color: #aaaaaa;
 
     margin-bottom: 10px;
 }
@@ -425,6 +486,8 @@ header {
     letter-spacing: 2px;
 
     line-height: 1;
+
+    color: white;
 }
 
 .card-info span {
@@ -434,15 +497,15 @@ header {
 
     font-size: 9px;
 
-    color: #aaa;
+    color: #aaaaaa;
 
     letter-spacing: 2px;
 }
 
 
-/* =========================
+/* =========================================================
    ATHLETE
-========================= */
+========================================================= */
 
 .athlete-section {
     max-width: 1300px;
@@ -500,8 +563,12 @@ header {
     letter-spacing: 2px;
 }
 
+.athlete-content {
+    color: white;
+}
+
 .athlete-content > p:not(.eyebrow) {
-    color: #999;
+    color: #999999;
 
     font-size: 14px;
 
@@ -542,15 +609,16 @@ header {
 
 .discover-btn:hover {
     background: white;
+
     color: black;
 
     transform: translateX(8px);
 }
 
 
-/* =========================
+/* =========================================================
    DISCOVER PANEL
-========================= */
+========================================================= */
 
 .discover-panel {
     max-height: 0;
@@ -565,6 +633,8 @@ header {
         );
 
     transition: max-height 0.8s ease;
+
+    color: white;
 }
 
 .discover-panel.open {
@@ -582,7 +652,7 @@ header {
 .panel-content > p:not(.eyebrow) {
     max-width: 500px;
 
-    color: #999;
+    color: #999999;
 
     line-height: 1.8;
 
@@ -590,20 +660,22 @@ header {
 }
 
 
-/* =========================
+/* =========================================================
    EVENT
-========================= */
+========================================================= */
 
 .event-section {
     padding: 150px 35px;
 
     text-align: center;
 
-    background: #111;
+    background: #111111;
 
     position: relative;
 
     overflow: hidden;
+
+    color: white;
 }
 
 .event-section::before {
@@ -616,7 +688,7 @@ header {
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,0.04);
+    background: rgba(255, 255, 255, 0.04);
 
     filter: blur(60px);
 
@@ -626,17 +698,19 @@ header {
 
 .event-header {
     position: relative;
+
     z-index: 2;
 }
 
 .event-header > p:last-child {
-    color: #777;
+    color: #777777;
 
     margin-top: 20px;
 }
 
 .countdown {
     position: relative;
+
     z-index: 2;
 
     display: flex;
@@ -655,9 +729,9 @@ header {
 
     padding: 30px 15px;
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
 
     transition: 0.35s;
 }
@@ -665,7 +739,7 @@ header {
 .time-box:hover {
     transform: translateY(-10px);
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .time-box span {
@@ -676,6 +750,8 @@ header {
     font-size: 70px;
 
     line-height: 1;
+
+    color: white;
 }
 
 .time-box small {
@@ -683,7 +759,7 @@ header {
 
     margin-top: 10px;
 
-    color: #777;
+    color: #777777;
 
     font-size: 9px;
 
@@ -691,9 +767,9 @@ header {
 }
 
 
-/* =========================
+/* =========================================================
    STATS
-========================= */
+========================================================= */
 
 .stats-section {
     max-width: 1100px;
@@ -710,7 +786,7 @@ header {
 }
 
 .stat {
-    border-top: 1px solid #333;
+    border-top: 1px solid #333333;
 
     padding-top: 20px;
 }
@@ -718,7 +794,7 @@ header {
 .stat span {
     font-size: 10px;
 
-    color: #777;
+    color: #777777;
 }
 
 .stat h3 {
@@ -727,6 +803,8 @@ header {
     font-size: 70px;
 
     margin-top: 20px;
+
+    color: white;
 }
 
 .stat p {
@@ -734,13 +812,42 @@ header {
 
     letter-spacing: 3px;
 
-    color: #777;
+    color: #777777;
 }
 
 
-/* =========================
-   SCROLL ANIMATION
-========================= */
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 50px 35px;
+
+    text-align: center;
+
+    background: #050505;
+
+    color: white;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-top: 10px;
+
+    font-size: 10px;
+
+    color: #777777;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
 
 .reveal {
     opacity: 0;
@@ -759,82 +866,385 @@ header {
 }
 
 
-/* =========================
+/* =========================================================
    LIGHT MODE
-========================= */
+========================================================= */
 
 body.light-mode {
-    background: #f2f2f2;
+    background: #f4f4f4;
 
-    color: #111;
+    color: #111111;
 }
 
+
+/* ---------- NAVBAR ---------- */
+
 body.light-mode header {
-    background: rgba(255,255,255,0.85);
+    background: rgba(255, 255, 255, 0.92);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .logo {
+    color: #111111;
+}
+
+body.light-mode .logo span {
+    color: #111111;
+
+    opacity: 0.45;
 }
 
 body.light-mode .nav-links a {
-    color: #111;
+    color: #111111;
 }
 
 body.light-mode #theme-toggle {
-    color: #111;
+    color: #111111;
 
-    border-color: #111;
+    border-color: #111111;
+
+    background: transparent;
+}
+
+
+/* ---------- HERO ---------- */
+
+/*
+   Hero keeps white text because the
+   image has a dark overlay.
+*/
+
+body.light-mode .hero {
+    color: white;
 }
 
 body.light-mode .hero-bg {
-    filter: brightness(0.8);
+    filter: brightness(0.75);
 }
 
-body.light-mode .hero h1 span,
-body.light-mode .intro h2 span,
-body.light-mode .section-title h2 span,
-body.light-mode .athlete-content h2 span,
-body.light-mode .event-header h2 span,
-body.light-mode .panel-content h2 span {
-    -webkit-text-stroke: 1px #111;
+body.light-mode .hero-content {
+    color: white;
 }
 
-body.light-mode .intro-text,
+body.light-mode .hero .eyebrow {
+    color: white;
+}
+
+body.light-mode .hero h1 {
+    color: white;
+}
+
+body.light-mode .hero h1 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px white;
+}
+
+body.light-mode .hero-description {
+    color: #eeeeee;
+}
+
+body.light-mode .hero-number {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+body.light-mode .scroll-text {
+    color: #eeeeee;
+}
+
+
+/* ---------- HERO BUTTON ---------- */
+
+body.light-mode .hero .main-btn {
+    background: white;
+
+    color: #111111;
+}
+
+body.light-mode .hero .main-btn:hover {
+    background: transparent;
+
+    color: white;
+
+    outline: 1px solid white;
+}
+
+
+/* ---------- INTRO ---------- */
+
+body.light-mode .intro {
+    color: #111111;
+}
+
+body.light-mode .intro-number {
+    color: #666666;
+}
+
+body.light-mode .intro .eyebrow {
+    color: #555555;
+}
+
+body.light-mode .intro h2 {
+    color: #111111;
+}
+
+body.light-mode .intro h2 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px #111111;
+}
+
+body.light-mode .intro-text {
+    color: #444444;
+}
+
+
+/* ---------- RUSH ---------- */
+
+body.light-mode .rush-section {
+    color: #111111;
+}
+
+body.light-mode .section-title {
+    color: #111111;
+}
+
+body.light-mode .section-title .eyebrow {
+    color: #555555;
+}
+
+body.light-mode .section-title h2 {
+    color: #111111;
+}
+
+body.light-mode .section-title h2 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px #111111;
+}
+
+body.light-mode .section-title > p {
+    color: #555555;
+}
+
+
+/* ---------- CARDS ---------- */
+
+/*
+   Cards remain white because they
+   contain dark image overlays.
+*/
+
+body.light-mode .experience-card {
+    background: #222222;
+}
+
+body.light-mode .card-number {
+    color: white;
+
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+body.light-mode .card-info {
+    color: white;
+}
+
+body.light-mode .card-info p {
+    color: #dddddd;
+}
+
+body.light-mode .card-info h3 {
+    color: white;
+}
+
+body.light-mode .card-info span {
+    color: #cccccc;
+}
+
+
+/* ---------- ATHLETE ---------- */
+
+body.light-mode .athlete-section {
+    color: #111111;
+}
+
+body.light-mode .athlete-content {
+    color: #111111;
+}
+
+body.light-mode .athlete-content .eyebrow {
+    color: #555555;
+}
+
+body.light-mode .athlete-content h2 {
+    color: #111111;
+}
+
+body.light-mode .athlete-content h2 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px #111111;
+}
+
 body.light-mode .athlete-content > p:not(.eyebrow) {
-    color: #555;
+    color: #444444;
 }
 
-body.light-mode .event-section {
-    background: #ddd;
-}
-
-body.light-mode .time-box {
-    background: rgba(0,0,0,0.04);
-
-    border-color: rgba(0,0,0,0.12);
-}
-
-body.light-mode .discover-panel {
-    background: #ddd;
-}
-
-body.light-mode .discover-btn {
-    color: #111;
-
-    border-color: #111;
-}
-
-body.light-mode .discover-btn:hover {
-    background: #111;
+body.light-mode .image-label {
+    background: #111111;
 
     color: white;
 }
 
-body.light-mode footer {
-    background: #ddd;
+
+/* ---------- DISCOVER BUTTON ---------- */
+
+body.light-mode .discover-btn {
+    color: #111111;
+
+    border-color: #111111;
+
+    background: transparent;
+}
+
+body.light-mode .discover-btn:hover {
+    background: #111111;
+
+    color: white;
 }
 
 
-/* =========================
+/* ---------- DISCOVER PANEL ---------- */
+
+body.light-mode .discover-panel {
+    background: #dddddd;
+
+    color: #111111;
+}
+
+body.light-mode .panel-content {
+    color: #111111;
+}
+
+body.light-mode .panel-content .eyebrow {
+    color: #555555;
+}
+
+body.light-mode .panel-content h2 {
+    color: #111111;
+}
+
+body.light-mode .panel-content h2 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px #111111;
+}
+
+body.light-mode .panel-content > p:not(.eyebrow) {
+    color: #444444;
+}
+
+
+/* ---------- EVENT ---------- */
+
+body.light-mode .event-section {
+    background: #dddddd;
+
+    color: #111111;
+}
+
+body.light-mode .event-header {
+    color: #111111;
+}
+
+body.light-mode .event-header .eyebrow {
+    color: #555555;
+}
+
+body.light-mode .event-header h2 {
+    color: #111111;
+}
+
+body.light-mode .event-header h2 span {
+    color: transparent;
+
+    -webkit-text-stroke: 1px #111111;
+}
+
+body.light-mode .event-header > p:last-child {
+    color: #555555;
+}
+
+
+/* ---------- COUNTDOWN ---------- */
+
+body.light-mode .time-box {
+    background: rgba(255, 255, 255, 0.4);
+
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .time-box:hover {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+body.light-mode .time-box span {
+    color: #111111;
+}
+
+body.light-mode .time-box small {
+    color: #555555;
+}
+
+
+/* ---------- STATS ---------- */
+
+body.light-mode .stats-section {
+    color: #111111;
+}
+
+body.light-mode .stat {
+    border-color: #aaaaaa;
+}
+
+body.light-mode .stat span {
+    color: #666666;
+}
+
+body.light-mode .stat h3 {
+    color: #111111;
+}
+
+body.light-mode .stat p {
+    color: #555555;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+body.light-mode footer {
+    background: #dddddd;
+
+    color: #111111;
+}
+
+body.light-mode .footer-logo {
+    color: #111111;
+}
+
+body.light-mode .footer-logo span {
+    color: #111111;
+}
+
+body.light-mode footer p {
+    color: #555555;
+}
+
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 800px) {
 
@@ -864,6 +1274,9 @@ body.light-mode footer {
         left: 20px;
     }
 
+
+    /* INTRO */
+
     .intro {
         grid-template-columns: 1fr;
 
@@ -871,6 +1284,9 @@ body.light-mode footer {
 
         gap: 20px;
     }
+
+
+    /* RUSH */
 
     .rush-section {
         padding: 60px 20px 100px;
@@ -892,6 +1308,9 @@ body.light-mode footer {
         height: 480px;
     }
 
+
+    /* ATHLETE */
+
     .athlete-section {
         grid-template-columns: 1fr;
 
@@ -904,6 +1323,16 @@ body.light-mode footer {
         height: 500px;
     }
 
+
+    /* DISCOVER */
+
+    .panel-content {
+        padding: 90px 20px;
+    }
+
+
+    /* EVENT */
+
     .event-section {
         padding: 100px 20px;
     }
@@ -911,6 +1340,9 @@ body.light-mode footer {
     .time-box {
         width: calc(50% - 10px);
     }
+
+
+    /* STATS */
 
     .stats-section {
         grid-template-columns: 1fr;
@@ -924,8 +1356,19 @@ body.light-mode footer {
         font-size: 60px;
     }
 
+
+    /* FOOTER */
+
+    footer {
+        padding: 40px 20px;
+    }
+
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 400px) {
 

@@ -9,9 +9,13 @@ themeButton.addEventListener("click", function () {
     document.body.classList.toggle("light-mode");
 
     if (document.body.classList.contains("light-mode")) {
+
         themeButton.textContent = "☾";
+
     } else {
+
         themeButton.textContent = "☀";
+
     }
 
 });
@@ -54,17 +58,20 @@ revealElements.forEach(function (element) {
 
 
 /* =========================
-   DISCOVER MORE BUTTON
+   DISCOVER MORE
 ========================= */
 
-const discoverButton = document.getElementById("discover-btn");
+const discoverButton =
+    document.getElementById("discover-btn");
 
-const discoverPanel = document.getElementById("discover-panel");
+const discoverPanel =
+    document.getElementById("discover-panel");
 
 
 discoverButton.addEventListener("click", function () {
 
     discoverPanel.classList.toggle("open");
+
 
     if (discoverPanel.classList.contains("open")) {
 
@@ -90,27 +97,33 @@ discoverButton.addEventListener("click", function () {
 ========================= */
 
 /*
-   Change this date if you want
-   a different event date.
+    The countdown is set to 15 days
+    from the time the page is opened.
 */
 
 const eventDate = new Date();
 
-eventDate.setDate(eventDate.getDate() + 15);
+eventDate.setDate(
+    eventDate.getDate() + 15
+);
 
 
 function updateCountdown() {
 
     const now = new Date();
 
-    const difference = eventDate - now;
+    const difference =
+        eventDate - now;
 
 
     if (difference <= 0) {
 
         document.getElementById("days").textContent = "00";
+
         document.getElementById("hours").textContent = "00";
+
         document.getElementById("minutes").textContent = "00";
+
         document.getElementById("seconds").textContent = "00";
 
         return;
@@ -119,17 +132,20 @@ function updateCountdown() {
 
 
     const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
+        difference /
+        (1000 * 60 * 60 * 24)
     );
 
 
     const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
+        (difference /
+        (1000 * 60 * 60)) % 24
     );
 
 
     const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
+        (difference /
+        (1000 * 60)) % 60
     );
 
 
@@ -156,6 +172,11 @@ function updateCountdown() {
 }
 
 
+/* Start countdown immediately */
+
 updateCountdown();
+
+
+/* Update every second */
 
 setInterval(updateCountdown, 1000);
